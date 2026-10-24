@@ -1,4 +1,4 @@
-CCPA Training – Networking Practicals Documentation
+<bold>CCPA Training – Networking Practicals Documentation</bold>
 
 About This Repository
 
