@@ -1,0 +1,91 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_sk9k6z\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ETHSW SW1]]
+        1 = access 1 R1 f0/0
+        2 = access 1 R2 f0/0
+        3 = access 1 R3 f0/0
+        x = -441.5
+        y = -30.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2101
+        aux = 2501
+        f0/0 = SW1 1
+        cnfg = configs\R1.cfg
+        x = -711.0
+        y = -31.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2102
+        aux = 2502
+        f0/0 = SW1 2
+        cnfg = configs\R2.cfg
+        x = -225.0
+        y = -175.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2103
+        aux = 2503
+        f0/0 = SW1 3
+        cnfg = configs\R3.cfg
+        x = -213.0
+        y = 128.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "192.168.100.1"
+        x = -728.0
+        y = -81.5
+    [[NOTE 2]]
+        text = "DHCP-server"
+        x = -735.0
+        y = 19.5
+    [[NOTE 3]]
+        text = "client-2"
+        x = -210.0
+        y = 184.5
+    [[NOTE 4]]
+        text = "client-1"
+        x = -209.0
+        y = -92.5
+    [[NOTE 5]]
+        text = "f0/0"
+        x = -56.3742035826
+        y = -1.49278490068
+        interface = R3 f0/0
+    [[NOTE 6]]
+        text = "f0/0"
+        x = 12.4550945058
+        y = 43.7885133817
+        interface = R2 f0/0
+    [[NOTE 7]]
+        text = "f0/0"
+        x = 72.9932434943
+        y = 21.2648300828
+        interface = R1 f0/0
+    [[NOTE 8]]
+        text = "3"
+        x = 67.8742035826
+        y = 39.4927849007
+        interface = SW1 3
+    [[NOTE 9]]
+        text = "2"
+        x = 69.0449054942
+        y = -5.78851338174
+        interface = SW1 2
+    [[NOTE 10]]
+        text = "1"
+        x = -4.49324349428
+        y = 16.7351699172
+        interface = SW1 1

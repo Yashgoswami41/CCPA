@@ -1,0 +1,125 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_oc6hwe\working
+    udp = 10001
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2104
+        aux = 2504
+        slot1 = PA-4T+
+        s1/0 = R2 s1/0
+        s1/1 = R4 s1/0
+        cnfg = configs\R1.cfg
+        x = -130.0
+        y = 65.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2105
+        aux = 2505
+        slot1 = PA-4T+
+        s1/0 = R1 s1/0
+        s1/1 = R3 s1/0
+        cnfg = configs\R2.cfg
+        x = -147.0
+        y = -113.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_oc6hwe\working
+    udp = 10101
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2107
+        aux = 2507
+        slot1 = PA-4T+
+        s1/0 = R1 s1/1
+        cnfg = configs\R4.cfg
+        x = 72.0
+        y = 278.0
+        z = 1.0
+    [[ROUTER R3]]
+        console = 2106
+        aux = 2506
+        slot1 = PA-4T+
+        s1/0 = R2 s1/1
+        cnfg = configs\R3.cfg
+        x = 100.0
+        y = -103.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "172.168.1.2"
+        x = 106.0
+        y = -158.5
+    [[NOTE 2]]
+        text = "172.168.1.1"
+        x = -139.0
+        y = -183.5
+    [[NOTE 3]]
+        text = "192.168.1.2"
+        x = -98.0
+        y = -57.5
+    [[NOTE 4]]
+        text = "192.168.1.1"
+        x = -49.0
+        y = 54.5
+    [[NOTE 5]]
+        text = "202.54.32.3"
+        x = -218.0
+        y = 144.5
+    [[NOTE 6]]
+        text = "202.54.32.3"
+        x = -42.0
+        y = 304.5
+    [[NOTE 7]]
+        text = "RIP-V2"
+        x = -65.0
+        y = 205.5
+    [[NOTE 8]]
+        text = "AREA=0"
+        x = -1.0
+        y = -7.5
+    [[NOTE 9]]
+        text = "s1/0"
+        x = -66.4141964394
+        y = -11.1072877254
+        interface = R4 s1/0
+    [[NOTE 10]]
+        text = "s1/0"
+        x = -40.970506983
+        y = -58.4642358498
+        interface = R3 s1/0
+    [[NOTE 11]]
+        text = "s1/1"
+        x = 24.970506983
+        y = -46.5357641502
+        interface = R2 s1/1
+    [[NOTE 12]]
+        text = "s1/0"
+        x = 45.9810963121
+        y = 32.1956898352
+        interface = R2 s1/0
+    [[NOTE 13]]
+        text = "s1/0"
+        x = 54.0189036879
+        y = -28.1956898352
+        interface = R1 s1/0
+    [[NOTE 14]]
+        text = "s1/1"
+        x = 10.4141964394
+        y = 58.1072877254
+        interface = R1 s1/1
+    [[SHAPE 1]]
+        type = ellipse
+        x = -202.0
+        y = -114.0
+        width = 389.0
+        height = 200.0
+        border_style = 2

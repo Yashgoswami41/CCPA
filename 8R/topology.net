@@ -1,0 +1,161 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = C:\Users\asus\AppData\Local\Temp
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2118
+        aux = 2518
+        f0/0 = R3 f0/1
+        f0/1 = R5 f0/0
+        cnfg = configs\R4.cfg
+        x = -57.0416305603
+        y = -95.5391052434
+        z = 1.0
+    [[ROUTER R5]]
+        model = 2621
+        console = 2119
+        aux = 2519
+        f0/0 = R4 f0/1
+        f0/1 = R6 f0/0
+        cnfg = configs\R5.cfg
+        x = 71.6518036155
+        y = 365.49451609
+        z = 1.0
+    [[ROUTER R6]]
+        model = 2621
+        console = 2120
+        aux = 2520
+        f0/0 = R5 f0/1
+        f0/1 = R7 f0/0
+        cnfg = configs\R6.cfg
+        x = 227.215295476
+        y = -115.338095117
+        z = 1.0
+    [[ROUTER R7]]
+        model = 2621
+        console = 2121
+        aux = 2521
+        f0/0 = R6 f0/1
+        f0/1 = R8 f0/0
+        cnfg = configs\R7.cfg
+        x = 302.168614282
+        y = 376.808224589
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2115
+        aux = 2515
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -537.874241767
+        y = 341.45288553
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2116
+        aux = 2516
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/0
+        cnfg = configs\R2.cfg
+        x = -385.139177031
+        y = -94.124891681
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2117
+        aux = 2517
+        f0/0 = R2 f0/1
+        f0/1 = R4 f0/0
+        cnfg = configs\R3.cfg
+        x = -173.007142675
+        y = 338.624458405
+        z = 1.0
+    [[ROUTER R8]]
+        model = 2621
+        console = 2122
+        aux = 2522
+        f0/0 = R7 f0/1
+        cnfg = configs\R8.cfg
+        x = 552.484414822
+        y = -94.124891681
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "f0/0"
+        x = 11.9458154153
+        y = 56.0106058675
+        interface = R8 f0/0
+    [[NOTE 2]]
+        text = "f0/1"
+        x = 75.2673880202
+        y = 27.5873738789
+        interface = R7 f0/1
+    [[NOTE 3]]
+        text = "f0/0"
+        x = -39.8122484126
+        y = -27.4709415398
+        interface = R7 f0/0
+    [[NOTE 4]]
+        text = "f0/1"
+        x = 87.4274721017
+        y = -4.8965908283
+        interface = R6 f0/1
+    [[NOTE 5]]
+        text = "f0/0"
+        x = -58.1356316203
+        y = 35.6634584461
+        interface = R6 f0/0
+    [[NOTE 6]]
+        text = "f0/1"
+        x = 63.3244484383
+        y = 26.7213178647
+        interface = R5 f0/1
+    [[NOTE 7]]
+        text = "f0/0"
+        x = -37.9443016712
+        y = -22.9128216732
+        interface = R5 f0/0
+    [[NOTE 8]]
+        text = "f0/1"
+        x = 85.5595253603
+        y = 16.0011334278
+        interface = R4 f0/1
+    [[NOTE 9]]
+        text = "f0/0"
+        x = -85.3985032446
+        y = 19.9656762166
+        interface = R4 f0/0
+    [[NOTE 10]]
+        text = "f0/1"
+        x = 77.8593980012
+        y = 57.9754492803
+        interface = R3 f0/1
+    [[NOTE 11]]
+        text = "f0/0"
+        x = -64.4678910166
+        y = 25.3237830615
+        interface = R3 f0/0
+    [[NOTE 12]]
+        text = "f0/1"
+        x = 95.1125519573
+        y = -3.9512000595
+        interface = R2 f0/1
+    [[NOTE 13]]
+        text = "f0/0"
+        x = -77.8311822139
+        y = 32.6882759628
+        interface = R2 f0/0
+    [[NOTE 14]]
+        text = "f0/0"
+        x = 42.0078057231
+        y = -16.9725472102
+        interface = R1 f0/0

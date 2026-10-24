@@ -1,0 +1,112 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = C:\Users\asus\AppData\Local\Temp
+    udp = 10001
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2110
+        aux = 2510
+        slot1 = PA-4T+
+        s1/0 = R2 s1/0
+        cnfg = configs\R1.cfg
+        x = 13.6690475583
+        y = -255.345237791
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2111
+        aux = 2511
+        slot1 = PA-4T+
+        s1/0 = R1 s1/0
+        s1/1 = R3 s1/0
+        s1/2 = R4 s1/0
+        cnfg = configs\R2.cfg
+        x = -205.534054609
+        y = -5.02943725153
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\asus\AppData\Local\Temp
+    udp = 10101
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2113
+        aux = 2513
+        slot1 = PA-4T+
+        s1/0 = R2 s1/2
+        cnfg = configs\R4.cfg
+        x = 43.3675323681
+        y = 249.529003975
+        z = 1.0
+    [[ROUTER R3]]
+        console = 2112
+        aux = 2512
+        slot1 = PA-4T+
+        s1/0 = R2 s1/1
+        cnfg = configs\R3.cfg
+        x = -420.49451609
+        y = 224.073159853
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "20.1.1.2"
+        x = 134.350288425
+        y = 199.046247918
+    [[NOTE 2]]
+        text = "20.1.1.1"
+        x = -33.9411254969
+        y = 20.8553390593
+    [[NOTE 3]]
+        text = "10.1.1.2"
+        x = -527.501658765
+        y = 179.247258045
+    [[NOTE 4]]
+        text = "10.1.1.1"
+        x = -363.45288553
+        y = 20.8553390593
+    [[NOTE 5]]
+        text = "192.168.1.11"
+        x = -257.386868352
+        y = -109.252308679
+    [[NOTE 6]]
+        text = "192.168.1.10"
+        x = -97.5807358037
+        y = -305.827993849
+    [[NOTE 7]]
+        text = "s1/0"
+        x = 72.7701191646
+        y = 7.74283492392
+        interface = R4 s1/0
+    [[NOTE 8]]
+        text = "s1/0"
+        x = 72.6157530358
+        y = 16.616018962
+        interface = R3 s1/0
+    [[NOTE 9]]
+        text = "s1/2"
+        x = 85.1537623896
+        y = 29.1860972642
+        interface = R2 s1/2
+    [[NOTE 10]]
+        text = "s1/1"
+        x = -60.3558684059
+        y = 14.6560589767
+        interface = R2 s1/1
+    [[NOTE 11]]
+        text = "s1/0"
+        x = 6.59298497853
+        y = -71.8405986287
+        interface = R2 s1/0
+    [[NOTE 12]]
+        text = "s1/0"
+        x = -63.6295649049
+        y = 1.28930007658
+        interface = R1 s1/0

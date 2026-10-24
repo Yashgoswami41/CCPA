@@ -1,0 +1,103 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_4ypnwy\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2104
+        aux = 2504
+        f0/0 = R3 f0/0
+        cnfg = configs\R4.cfg
+        x = 124.0
+        y = -195.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2101
+        aux = 2501
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -224.0
+        y = 161.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2102
+        aux = 2502
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/1
+        cnfg = configs\R2.cfg
+        x = -179.0
+        y = 2.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2103
+        aux = 2503
+        f0/0 = R4 f0/0
+        f0/1 = R2 f0/1
+        cnfg = configs\R3.cfg
+        x = 66.0
+        y = -5.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "192.168.3.2"
+        x = 187.0
+        y = -159.5
+    [[NOTE 2]]
+        text = "192.168.3.1"
+        x = 152.0
+        y = -3.5
+    [[NOTE 3]]
+        text = "192.168.2.2"
+        x = 49.0
+        y = 67.5
+    [[NOTE 4]]
+        text = "192.168.2.1"
+        x = -132.0
+        y = -74.5
+    [[NOTE 5]]
+        text = "192.168.1.2"
+        x = -138.0
+        y = 85.5
+    [[NOTE 6]]
+        text = "192.168.1.1"
+        x = -131.0
+        y = 164.5
+    [[NOTE 7]]
+        text = "f0/0"
+        x = 24.3214900884
+        y = 55.2571876416
+        interface = R4 f0/0
+    [[NOTE 8]]
+        text = "f0/0"
+        x = 52.6785099116
+        y = -18.2571876416
+        interface = R3 f0/0
+    [[NOTE 9]]
+        text = "f0/1"
+        x = -40.9836834584
+        y = 35.142390956
+        interface = R3 f0/1
+    [[NOTE 10]]
+        text = "f0/1"
+        x = 47.9836834584
+        y = -31.142390956
+        interface = R2 f0/1
+    [[NOTE 11]]
+        text = "f0/0"
+        x = 22.107101368
+        y = 60.488241833
+        interface = R2 f0/0
+    [[NOTE 12]]
+        text = "f0/0"
+        x = 63.892898632
+        y = 29.511758167
+        interface = R1 f0/0

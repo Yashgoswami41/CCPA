@@ -1,0 +1,121 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_kh6c3s\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2108
+        aux = 2508
+        f0/0 = SW1 4
+        cnfg = configs\R4.cfg
+        x = -159.0
+        y = 221.0
+        z = 1.0
+    [[ROUTER R5]]
+        model = 2621
+        console = 2109
+        aux = 2509
+        f0/0 = SW1 5
+        cnfg = configs\R5.cfg
+        x = -399.0
+        y = 232.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2105
+        aux = 2505
+        f0/0 = SW1 1
+        cnfg = configs\R1.cfg
+        x = -668.0
+        y = 51.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2106
+        aux = 2506
+        f0/0 = SW1 2
+        cnfg = configs\R2.cfg
+        x = -332.0
+        y = -108.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2107
+        aux = 2507
+        f0/0 = SW1 3
+        cnfg = configs\R3.cfg
+        x = -130.0
+        y = 12.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 R1 f0/0
+        2 = access 1 R2 f0/0
+        3 = access 1 R3 f0/0
+        4 = access 1 R4 f0/0
+        5 = access 1 R5 f0/0
+        x = -366.5
+        y = 53.0
+        z = 1.0
+        hx = -26.0
+        hy = -25.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "192.168.10.11"
+        x = -652.0
+        y = -5.5
+    [[NOTE 2]]
+        text = "5"
+        x = 31.7735864542
+        y = 55.8260447708
+        interface = SW1 5
+    [[NOTE 3]]
+        text = "4"
+        x = 65.9959172378
+        y = 41.8843395092
+        interface = SW1 4
+    [[NOTE 4]]
+        text = "3"
+        x = 75.0599307503
+        y = 10.0829163408
+        interface = SW1 3
+    [[NOTE 5]]
+        text = "2"
+        x = 43.5875089311
+        y = -23.173871385
+        interface = SW1 2
+    [[NOTE 6]]
+        text = "1"
+        x = -4.49653784567
+        y = 16.5262702348
+        interface = SW1 1
+    [[NOTE 7]]
+        text = "f0/0"
+        x = 63.7264135458
+        y = -21.8260447708
+        interface = R5 f0/0
+    [[NOTE 8]]
+        text = "f0/0"
+        x = -60.4959172378
+        y = -5.88433950916
+        interface = R4 f0/0
+    [[NOTE 9]]
+        text = "f0/0"
+        x = -14.5599307503
+        y = 43.9170836592
+        interface = R3 f0/0
+    [[NOTE 10]]
+        text = "f0/0"
+        x = 24.9124910689
+        y = 61.173871385
+        interface = R2 f0/0
+    [[NOTE 11]]
+        text = "f0/0"
+        x = 72.9965378457
+        y = 21.4737297652
+        interface = R1 f0/0

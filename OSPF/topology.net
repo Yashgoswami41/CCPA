@@ -1,0 +1,86 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_dshdpl\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R1]]
+        model = 2621
+        console = 2101
+        aux = 2501
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -433.0
+        y = 99.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2102
+        aux = 2502
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/1
+        cnfg = configs\R2.cfg
+        x = -244.0
+        y = -218.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2103
+        aux = 2503
+        f0/1 = R2 f0/1
+        cnfg = configs\R3.cfg
+        x = -81.0
+        y = 90.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "AREA = 0"
+        x = -262.0
+        y = -28.5
+    [[NOTE 2]]
+        text = "192.168.4.11"
+        x = -56.0
+        y = 36.5
+    [[NOTE 3]]
+        text = "192.168.4.10"
+        x = -112.0
+        y = -152.5
+    [[NOTE 4]]
+        text = "192.168.1.2"
+        x = -394.0
+        y = -148.5
+    [[NOTE 5]]
+        text = "192.168.1.1"
+        x = -498.0
+        y = 136.5
+    [[NOTE 6]]
+        text = "f0/1"
+        x = -50.7102346243
+        y = -21.3543083698
+        interface = R3 f0/1
+    [[NOTE 7]]
+        text = "f0/1"
+        x = 69.7102346243
+        y = 34.3543083698
+        interface = R2 f0/1
+    [[NOTE 8]]
+        text = "f0/0"
+        x = -50.9700871824
+        y = 38.0625225661
+        interface = R2 f0/0
+    [[NOTE 9]]
+        text = "f0/0"
+        x = 70.9700871824
+        y = -2.06252256607
+        interface = R1 f0/0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -455.0
+        y = -214.0
+        width = 466.0
+        height = 364.0
+        border_style = 2

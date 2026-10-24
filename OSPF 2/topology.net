@@ -1,0 +1,99 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_cftw2k\working
+    udp = 10001
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2110
+        aux = 2510
+        slot1 = PA-4T+
+        s1/0 = R2 s1/0
+        cnfg = configs\R1.cfg
+        x = -328.0
+        y = 182.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2111
+        aux = 2511
+        slot1 = PA-4T+
+        s1/0 = R1 s1/0
+        s1/1 = R3 s1/0
+        cnfg = configs\R2.cfg
+        x = -438.0
+        y = 6.0
+        z = 1.0
+        hx = 25.5
+        hy = -27.0
+[127.0.0.1:7201]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_cftw2k\working
+    udp = 10101
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2113
+        aux = 2513
+        slot1 = PA-4T+
+        s1/0 = R3 s1/1
+        cnfg = configs\R4.cfg
+        x = -29.0
+        y = 108.0
+        z = 1.0
+    [[ROUTER R3]]
+        console = 2112
+        aux = 2512
+        slot1 = PA-4T+
+        s1/0 = R2 s1/1
+        s1/1 = R4 s1/0
+        cnfg = configs\R3.cfg
+        x = -214.0
+        y = -97.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "Area = 10"
+        x = -248.0
+        y = 63.5
+    [[NOTE 2]]
+        text = "s1/0"
+        x = 4.15618976706
+        y = -5.71343737695
+        interface = R4 s1/0
+    [[NOTE 3]]
+        text = "s1/1"
+        x = 61.8438102329
+        y = 49.713437377
+        interface = R3 s1/1
+    [[NOTE 4]]
+        text = "s1/0"
+        x = -1.90878244709
+        y = 41.5288737018
+        interface = R3 s1/0
+    [[NOTE 5]]
+        text = "s1/1"
+        x = 67.9087824471
+        y = 2.47112629819
+        interface = R2 s1/1
+    [[NOTE 6]]
+        text = "s1/0"
+        x = 57.2413818145
+        y = 53.8175330239
+        interface = R2 s1/0
+    [[NOTE 7]]
+        text = "s1/0"
+        x = 8.75861818553
+        y = -9.81753302387
+        interface = R1 s1/0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -406.0
+        y = -80.0
+        width = 412.0
+        height = 300.0
+        border_style = 2

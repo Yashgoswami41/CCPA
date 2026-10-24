@@ -1,0 +1,160 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7202]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_sjr9sy\working
+    udp = 10201
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        console = 2117
+        aux = 2517
+        slot1 = PA-4T+
+        s1/0 = R1 s1/0
+        s1/1 = R6 s1/0
+        s1/2 = R7 s1/0
+        cnfg = configs\R5.cfg
+        x = -532.0
+        y = 17.0
+        z = 1.0
+    [[ROUTER R6]]
+        console = 2118
+        aux = 2518
+        slot1 = PA-4T+
+        s1/0 = R5 s1/1
+        cnfg = configs\R6.cfg
+        x = -168.0
+        y = 203.0
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_sjr9sy\working
+    udp = 10301
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R7]]
+        console = 2119
+        aux = 2519
+        slot1 = PA-4T+
+        s1/0 = R5 s1/2
+        cnfg = configs\R7.cfg
+        x = -425.0
+        y = 266.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_sjr9sy\working
+    udp = 10001
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2113
+        aux = 2513
+        slot1 = PA-4T+
+        s1/0 = R5 s1/0
+        s1/1 = R2 s1/0
+        cnfg = configs\R1.cfg
+        x = -562.0
+        y = -217.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2114
+        aux = 2514
+        slot1 = PA-4T+
+        s1/0 = R1 s1/1
+        s1/1 = R4 s1/0
+        s1/2 = R3 s1/0
+        cnfg = configs\R2.cfg
+        x = -167.0
+        y = -183.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_sjr9sy\working
+    udp = 10101
+    [[7200]]
+        image = C:\Users\asus\Downloads\c7200-adventerprisek9-mz.153-3.XB12.image
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2116
+        aux = 2516
+        slot1 = PA-4T+
+        s1/0 = R2 s1/1
+        cnfg = configs\R4.cfg
+        x = 263.0
+        y = -137.0
+        z = 1.0
+    [[ROUTER R3]]
+        console = 2115
+        aux = 2515
+        slot1 = PA-4T+
+        s1/0 = R2 s1/2
+        cnfg = configs\R3.cfg
+        x = 100.0
+        y = 80.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "s1/0"
+        x = -45.4116948209
+        y = -14.5106954849
+        interface = R7 s1/0
+    [[NOTE 2]]
+        text = "s1/0"
+        x = -49.4727377459
+        y = 2.57625495462
+        interface = R6 s1/0
+    [[NOTE 3]]
+        text = "s1/2"
+        x = 1.41169482094
+        y = 56.5106954849
+        interface = R5 s1/2
+    [[NOTE 4]]
+        text = "s1/1"
+        x = 73.4727377459
+        y = 19.4237450454
+        interface = R5 s1/1
+    [[NOTE 5]]
+        text = "s1/0"
+        x = -28.3314933159
+        y = -32.122707206
+        interface = R5 s1/0
+    [[NOTE 6]]
+        text = "s1/0"
+        x = -43.9283904364
+        y = 23.6075875852
+        interface = R4 s1/0
+    [[NOTE 7]]
+        text = "s1/0"
+        x = -56.9576810074
+        y = -4.50542111827
+        interface = R3 s1/0
+    [[NOTE 8]]
+        text = "s1/2"
+        x = 28.9576810074
+        y = 59.5054211183
+        interface = R2 s1/2
+    [[NOTE 9]]
+        text = "s1/1"
+        x = 86.9283904364
+        y = -4.60758758523
+        interface = R2 s1/1
+    [[NOTE 10]]
+        text = "s1/0"
+        x = -54.9753356726
+        y = 25.5955293286
+        interface = R2 s1/0
+    [[NOTE 11]]
+        text = "s1/0"
+        x = 41.3314933159
+        y = 61.122707206
+        interface = R1 s1/0
+    [[NOTE 12]]
+        text = "s1/1"
+        x = 72.9753356726
+        y = 23.4044706714
+        interface = R1 s1/1

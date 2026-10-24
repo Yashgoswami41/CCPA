@@ -1,0 +1,133 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_k_55dj\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2111
+        aux = 2511
+        f0/0 = R3 f0/0
+        f0/1 = R5 f0/1
+        cnfg = configs\R4.cfg
+        x = -329.984848098
+        y = 164.676190233
+        z = 1.0
+    [[ROUTER R5]]
+        model = 2621
+        console = 2112
+        aux = 2512
+        f0/1 = R4 f0/1
+        cnfg = configs\R5.cfg
+        x = -189.977705423
+        y = -109.681240867
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2108
+        aux = 2508
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -875.871283174
+        y = 301.854905783
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2109
+        aux = 2509
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/1
+        cnfg = configs\R2.cfg
+        x = -711.822509939
+        y = 19.0121933088
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2110
+        aux = 2510
+        f0/0 = R4 f0/0
+        f0/1 = R2 f0/1
+        cnfg = configs\R3.cfg
+        x = -508.175756957
+        y = -299.185858225
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "192.168.5.11"
+        x = -127.279220614
+        y = -14.5
+    [[NOTE 2]]
+        text = "192.168.5.10"
+        x = -188.090403796
+        y = 146.720346111
+    [[NOTE 3]]
+        text = "202.54.32.3"
+        x = -473.761543395
+        y = 90.1518036156
+    [[NOTE 4]]
+        text = "202.54.32.2"
+        x = -400.222438152
+        y = -230.874675043
+    [[NOTE 5]]
+        text = "172.168.1.2"
+        x = -664.680374315
+        y = -230.874675043
+    [[NOTE 6]]
+        text = "172.168.1.1"
+        x = -632.153462381
+        y = 43.4827560573
+    [[NOTE 7]]
+        text = "192.168.1.2"
+        x = -862.670273048
+        y = 61.8675323681
+    [[NOTE 8]]
+        text = "192.168.1.1"
+        x = -1004.09162928
+        y = 268.342712475
+    [[NOTE 9]]
+        text = "f0/1"
+        x = 14.8182124809
+        y = 57.6289573607
+        interface = R5 f0/1
+    [[NOTE 10]]
+        text = "f0/1"
+        x = 109.164543576
+        y = 17.4837410115
+        interface = R4 f0/1
+    [[NOTE 11]]
+        text = "f0/0"
+        x = -52.0545831156
+        y = -37.9671061964
+        interface = R4 f0/0
+    [[NOTE 12]]
+        text = "f0/0"
+        x = 81.2850304939
+        y = 19.741709452
+        interface = R3 f0/0
+    [[NOTE 13]]
+        text = "f0/1"
+        x = -73.4149615993
+        y = 30.2350119037
+        interface = R3 f0/1
+    [[NOTE 14]]
+        text = "f0/1"
+        x = 71.5327106054
+        y = -11.6908560265
+        interface = R2 f0/1
+    [[NOTE 15]]
+        text = "f0/0"
+        x = -62.0220423966
+        y = 19.8316949488
+        interface = R2 f0/0
+    [[NOTE 16]]
+        text = "f0/0"
+        x = 53.0687235909
+        y = -12.6012475705
+        interface = R1 f0/0

@@ -1,0 +1,71 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_xdxuzt\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2111
+        aux = 2511
+        f0/0 = R3 f0/0
+        f0/1 = R5 f0/1
+        cnfg = configs\R4.cfg
+        x = 81.5512985521
+        y = -115.338095117
+        z = 1.0
+    [[ROUTER R5]]
+        model = 2621
+        console = 2112
+        aux = 2512
+        f0/0 = R6 f0/0
+        f0/1 = R4 f0/1
+        cnfg = configs\R5.cfg
+        x = 162.161471607
+        y = 98.2081528016
+        z = 1.0
+    [[ROUTER R6]]
+        model = 2621
+        console = 2113
+        aux = 2513
+        f0/0 = R5 f0/0
+        cnfg = configs\R6.cfg
+        x = 140.948268172
+        y = 330.139177031
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2108
+        aux = 2508
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -324.327993849
+        y = 204.27416998
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2109
+        aux = 2509
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/1
+        cnfg = configs\R2.cfg
+        x = -328.570634536
+        y = 40.2253967444
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2110
+        aux = 2510
+        f0/0 = R4 f0/0
+        f0/1 = R2 f0/1
+        cnfg = configs\R3.cfg
+        x = -175.8355698
+        y = -156.350288425
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187

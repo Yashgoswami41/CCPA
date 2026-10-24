@@ -1,0 +1,119 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = c:\users\asus\appdata\local\temp\GNS3_fmrlfs\working
+    udp = 10001
+    [[2621]]
+        image = C:\Users\asus\Downloads\c2600-ik9o3s3-mz.123-6.bin
+        ghostios = True
+        chassis = 2621
+    [[ROUTER R4]]
+        model = 2621
+        console = 2109
+        aux = 2509
+        f0/0 = R3 f0/0
+        f0/1 = R5 f0/1
+        cnfg = configs\R4.cfg
+        x = 182.0
+        y = -251.0
+        z = 1.0
+    [[ROUTER R5]]
+        model = 2621
+        console = 2110
+        aux = 2510
+        f0/0 = R6 f0/0
+        f0/1 = R4 f0/1
+        cnfg = configs\R5.cfg
+        x = 367.0
+        y = -58.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 2621
+        console = 2111
+        aux = 2511
+        f0/0 = R5 f0/0
+        cnfg = configs\R6.cfg
+        x = 384.0
+        y = 240.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 2621
+        console = 2106
+        aux = 2506
+        f0/0 = R2 f0/0
+        cnfg = configs\R1.cfg
+        x = -375.0
+        y = 202.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 2621
+        console = 2107
+        aux = 2507
+        f0/0 = R1 f0/0
+        f0/1 = R3 f0/1
+        cnfg = configs\R2.cfg
+        x = -205.0
+        y = 21.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 2621
+        console = 2108
+        aux = 2508
+        f0/0 = R4 f0/0
+        f0/1 = R2 f0/1
+        cnfg = configs\R3.cfg
+        x = -27.0
+        y = -143.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "f0/0"
+        x = 30.721824793
+        y = -17.9350712748
+        interface = R6 f0/0
+    [[NOTE 2]]
+        text = "f0/0"
+        x = 35.278175207
+        y = 61.9350712748
+        interface = R5 f0/0
+    [[NOTE 3]]
+        text = "f0/1"
+        x = 5.32053600834
+        y = -6.8764137859
+        interface = R5 f0/1
+    [[NOTE 4]]
+        text = "f0/1"
+        x = 60.6794639917
+        y = 50.8764137859
+        interface = R4 f0/1
+    [[NOTE 5]]
+        text = "f0/0"
+        x = -2.5358805643
+        y = 40.3630387605
+        interface = R4 f0/0
+    [[NOTE 6]]
+        text = "f0/0"
+        x = 68.5358805643
+        y = 3.6369612395
+        interface = R3 f0/0
+    [[NOTE 7]]
+        text = "f0/1"
+        x = 3.58253062774
+        y = 49.1037358261
+        interface = R3 f0/1
+    [[NOTE 8]]
+        text = "f0/1"
+        x = 62.4174693723
+        y = -5.10373582612
+        interface = R2 f0/1
+    [[NOTE 9]]
+        text = "f0/0"
+        x = 5.61557471504
+        y = 51.1563586858
+        interface = R2 f0/0
+    [[NOTE 10]]
+        text = "f0/0"
+        x = 60.384425285
+        y = -7.15635868575
+        interface = R1 f0/0
